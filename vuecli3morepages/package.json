@@ -8,6 +8,7 @@
     "build:test": "vue-tsc -b && vite build",
     "build": "vite build",
     "deploy": "gh-pages -d dist -b gh-pages",
+    "postbuild": "cpy dist/index.html dist --rename=404.html",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "@types/node": "^24.10.1",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
+    "cpy-cli": "^6.0.0",
     "typescript": "~5.9.3",
     "vite": "^7.2.4",
     "vue-tsc": "^3.1.4"
